@@ -3,11 +3,12 @@ package GUI;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
+
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class MainPage {
+public class History {
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("Cool Shoes");
 		JPanel topPanel = new JPanel();
