@@ -2,7 +2,9 @@ package GUI;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Font;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -12,21 +14,26 @@ public class MainPage {
 		JFrame frame = new JFrame("Cool Shoes");
 		JPanel topPanel = new JPanel();
 		JPanel downPanel = new JPanel();
-		JLabel order = new JLabel("Order");
+		JLabel order = new JLabel("Bestellung");
+
+		topPanel.setLayout(new BorderLayout());
 
 		
 		frame.setLayout(new BorderLayout());
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+		order.setFont(new Font("Tahoma", Font.PLAIN, 40));
+
 		
-		topPanel.setBackground(Color.RED);
+		topPanel.setBackground(Color.WHITE);
 		downPanel.setBackground(Color.BLACK);
-		topPanel.add(order);
+		
+		topPanel.add(order, BorderLayout.WEST);
 		frame.add(topPanel, BorderLayout.NORTH);
 		frame.add(downPanel, BorderLayout.SOUTH);
 		
 		frame.pack();
-		frame.setSize(600,600);
+		frame.setSize(900,600);
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
 	}
