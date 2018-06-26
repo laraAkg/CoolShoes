@@ -3,6 +3,8 @@ package GUI;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
+
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -13,7 +15,7 @@ public class MainPage {
 		JPanel topPanel = new JPanel();
 		JPanel downPanel = new JPanel();
 		JLabel order = new JLabel("Bestellung");
-
+		JButton historyButton = new JButton();
 		topPanel.setLayout(new BorderLayout());
 
 		
@@ -24,11 +26,11 @@ public class MainPage {
 
 		
 		topPanel.setBackground(Color.WHITE);
-		downPanel.setBackground(Color.BLACK);
+		downPanel.setBackground(Color.WHITE);
 		
 		topPanel.add(order, BorderLayout.WEST);
 		frame.add(topPanel, BorderLayout.NORTH);
-		frame.add(downPanel, BorderLayout.SOUTH);
+		frame.add(downPanel, BorderLayout.CENTER);
 		
 		frame.pack();
 		frame.setSize(900,600);
