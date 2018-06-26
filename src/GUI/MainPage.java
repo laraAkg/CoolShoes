@@ -8,7 +8,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTable;
 
 public class MainPage {
 	public static void main(String[] args) {
@@ -16,7 +15,7 @@ public class MainPage {
 		JPanel topPanel = new JPanel();
 		JPanel downPanel = new JPanel();
 		JLabel order = new JLabel("Bestellung");
-
+		JButton historyButton = new JButton();
 		topPanel.setLayout(new BorderLayout());
 
 		
