@@ -24,7 +24,6 @@ public class MainPage {
 
 		order.setFont(new Font("Tahoma", Font.PLAIN, 40));
 
-		
 		topPanel.setBackground(Color.WHITE);
 		downPanel.setBackground(Color.WHITE);
 		
