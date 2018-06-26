@@ -1,10 +1,12 @@
 package src;
 
 public class Bestellung {
+	
 	String zustand;
 	String bestellnummer;
 	String bearbeitung;
 	String geplanteLieferung;
+	
 	public String getZustand() {
 		return zustand;
 	}
