@@ -15,7 +15,7 @@ public class MainPage {
 		JPanel topPanel = new JPanel();
 		JPanel downPanel = new JPanel();
 		JLabel order = new JLabel("Bestellung");
-
+		JButton historyButton = new JButton();
 		topPanel.setLayout(new BorderLayout());
 
 		
@@ -26,11 +26,11 @@ public class MainPage {
 
 		
 		topPanel.setBackground(Color.WHITE);
-		downPanel.setBackground(Color.BLACK);
+		downPanel.setBackground(Color.WHITE);
 		
 		topPanel.add(order, BorderLayout.WEST);
 		frame.add(topPanel, BorderLayout.NORTH);
-		frame.add(downPanel, BorderLayout.SOUTH);
+		frame.add(downPanel, BorderLayout.CENTER);
 		
 		frame.pack();
 		frame.setSize(900,600);
