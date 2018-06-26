@@ -1,7 +1,10 @@
 package Connection;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+
+import DAO.Kunde;
 
 public class MyConnection {
 
@@ -22,17 +25,18 @@ public class MyConnection {
 	public ArrayList<String[]> getAllKunde(String tabelle) {
 		try {
 			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT KID as ID, KName as Name, KVorname as Vorname, KAdresse as Adresse, KPLZ as PLZ, KOrt as Ort, KEmailAdresse as Email, KPWD as Passwort FROM Kunde");
-			ArrayList<String[]> list = new ArrayList();
+			ResultSet rs = stmt.executeQuery(
+					"SELECT KID as ID, KName as Name, KVorname as Vorname, KAdresse as Adresse, KPLZ as PLZ, KOrt as Ort, KEmailAdresse as Email, KPWD as Passwort FROM Kunde");
+			Kunde kunde = new Kunde();
 			while (rs.next()) {
-				rs.getInt("ID");
-				rs.getString("Name");
-				rs.getString("Vorname");
-				rs.getString("Adresse");
-				rs.getString("PLZ");
-				rs.getString("Ort");
-				rs.getString("Email");
-				rs.getString("Passwort");				
+				kunde.setId(rs.getInt("ID"));
+				kunde.setVorname(rs.getString("Vorname"));
+				kunde.setNachname(rs.getString("Name"));
+				kunde.setAdreesse(rs.getString("Adresse"));
+				kunde.setPlz(rs.getString("PLZ"));
+				kunde.setOrt(rs.getString("Ort"));
+				kunde.setEmail(rs.getString("Email"));
+				kunde.setPasswort(rs.getString("Passwort"));
 			}
 			rs.close();
 			stmt.close();
@@ -40,7 +44,5 @@ public class MyConnection {
 			System.out.println("ungültiger SQL-Befehl");
 		}
 		return null;
-
 	}
-
 }
