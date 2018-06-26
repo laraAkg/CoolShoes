@@ -45,4 +45,25 @@ public class MyConnection {
 		}
 		return null;
 	}
+	
+	public ArrayList<String[]> getAllBestellstatus(String tabelle) {
+		try {
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(
+					"SELECT BID as id, FKKunde as Kunde, FKStatus as Status, FKMitarbeiter as Mitarbeiter FROM Bestellungen");
+			Kunde kunde = new Kunde();
+			while (rs.next()) {
+				kunde.setId(rs.getInt("ID"));
+				kunde.setVorname(rs.getString("Vorname"));
+				kunde.setNachname(rs.getString("Name"));
+				kunde.setAdreesse(rs.getString("Adresse"));
+			}
+			rs.close();
+			stmt.close();
+		} catch (SQLException err) {
+			System.out.println("ungültiger SQL-Befehl");
+		}
+		return null;
+	}
+	
 }
