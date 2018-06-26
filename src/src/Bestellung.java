@@ -2,6 +2,7 @@ package src;
 
 public class Bestellung {
 	
+	
 	String zustand;
 	String bestellnummer;
 	String bearbeitung;

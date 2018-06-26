@@ -2,7 +2,8 @@ package DAO;
 
 import java.util.Date;
 
-public class Bestellung {
+public class BestuellungStatus {
+	
 	private int bsID;
 	private String bestellnr;
 	private String status;
