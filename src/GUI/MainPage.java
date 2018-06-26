@@ -26,23 +26,15 @@ public class MainPage {
 
 		
 		topPanel.setBackground(Color.WHITE);
-		downPanel.setBackground(Color.BLACK);
+		downPanel.setBackground(Color.WHITE);
 		
 		topPanel.add(order, BorderLayout.WEST);
 		frame.add(topPanel, BorderLayout.NORTH);
-		frame.add(downPanel, BorderLayout.SOUTH);
+		frame.add(downPanel, BorderLayout.CENTER);
 		
 		frame.pack();
 		frame.setSize(900,600);
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
 	}
-	
-	public void createJTable(){
-		Object rowData[][] = { { "Row1-Column1", "Row1-Column2", "Row1-Column3"},
-		                       { "Row2-Column1", "Row2-Column2", "Row2-Column3"} };
-		Object columnNames[] = { "Column One", "Column Two", "Column Three"};
-		JTable table = new JTable(rowData, columnNames);
-	}
-	
 }
