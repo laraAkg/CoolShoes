@@ -8,6 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 
 public class MainPage {
 	public static void main(String[] args) {
@@ -37,4 +38,12 @@ public class MainPage {
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
 	}
+	
+	public void createJTable(){
+		Object rowData[][] = { { "Row1-Column1", "Row1-Column2", "Row1-Column3"},
+		                       { "Row2-Column1", "Row2-Column2", "Row2-Column3"} };
+		Object columnNames[] = { "Column One", "Column Two", "Column Three"};
+		JTable table = new JTable(rowData, columnNames);
+	}
+	
 }
